@@ -20,9 +20,20 @@ class Ad extends Component {
   }
 
   render() {
+    const styles = {
+        background: `repeating-linear-gradient(
+          45deg,
+          #606dbc,
+          #606dbc 10px,
+          #465298 10px,
+          #465298 20px
+        )`,
+      height: '2000px',
+      position: 'absolute'
+    };
     return (
       <div
-        style={{ height: '2000px', position: 'absolute' }}
+        style={styles}
         ref={anchor => { this.myAnchor = anchor }}
       />
     )
