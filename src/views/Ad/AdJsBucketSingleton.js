@@ -17,12 +17,6 @@ const bucket = new AdJS.Bucket(DFPNetwork, {
     Sticky,
   ],
   defaults: {
-    sizes: [
-      [300, 250],
-      [300, 600],
-      [360, 360],
-      [360, 720],
-    ],
     breakpoints: {
       mobile: { from: 0, to: 767 },
       tablet: { from: 768, to: 991 },

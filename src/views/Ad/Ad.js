@@ -21,7 +21,10 @@ class Ad extends Component {
 
   render() {
     return (
-      <div style={{ height: '10000px' }} ref={anchor => { this.myAnchor = anchor }} />
+      <div
+        style={{ height: '2000px', position: 'absolute' }}
+        ref={anchor => { this.myAnchor = anchor }}
+      />
     )
   }
 }
