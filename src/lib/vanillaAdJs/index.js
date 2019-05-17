@@ -31,4 +31,24 @@ const bucket = new AdJS.Bucket(DFPNetwork, {
   }
 });
 
-export default bucket;
+const defaultAdOptions =  {
+  path: "/2620/nbcnews/homepage_2",
+  sizes: {
+    mobile: [[300, 250], [300, 600]],
+    tablet: [[300, 250], [300, 600]],
+    desktop: [[300, 250], [300, 600], [360, 360], [360, 720]],
+    largeDesktop: [[300, 250], [300, 600], [360, 360], [360, 720]],
+  },
+  refreshOnBreakpoint: true,
+  targeting: { age: 30, gender: 'female' },
+}
+
+const createAd = (targetElement, options = null) => {
+  bucket.createAd(targetElement, { ...defaultAdOptions, ...options }); 
+}
+
+// Usage:
+const elm = document.getElementById('my-ad-target-1');
+createAd(elm, {})
+
+export default createAd;

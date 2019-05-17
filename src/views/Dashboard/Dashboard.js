@@ -11,6 +11,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="animated fadeIn">
+        <span>React.js</span>
         <Row>
           <Col sm="12" md="6" lg="4">
             <Ad {...this.props} />
@@ -20,6 +21,12 @@ class Dashboard extends Component {
           </Col>
           <Col sm="12" md="6" lg="4">
             <Ad {...this.props} />
+          </Col>
+        </Row>
+        <span>Vanilla</span>
+        <Row>
+          <Col sm="12" md="6" lg="4">
+            <div id="my-ad-target-1"></div>
           </Col>
         </Row>
       </div>
