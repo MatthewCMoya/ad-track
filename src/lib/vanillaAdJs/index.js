@@ -31,7 +31,7 @@ const bucket = new AdJS.Bucket(DFPNetwork, {
   }
 });
 
-const defaultAdOptions =  {
+const defaultAdOptions = {
   path: "/2620/nbcnews/homepage_2",
   sizes: {
     mobile: [[300, 250], [300, 600]],
