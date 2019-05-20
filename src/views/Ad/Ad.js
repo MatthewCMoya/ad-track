@@ -1,14 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import bucket from './AdJsBucketSingleton';
 
-const Ad = (props) => {
-  const anchor = useRef(null);
-  useLayoutEffect(() => { bucket.createAd(anchor.current, { ...defaultOptions, ...props.options }); });
-
-  return <div style={{ height: '2000px', position: 'absolute' }} ref={anchor} />;
-}
-
-
 const defaultOptions = {
   path: "/2620/nbcnews/homepage_2",
   sizes: {
@@ -21,37 +13,17 @@ const defaultOptions = {
   targeting: { age: 30, gender: 'female' },
 }
 
-/*
+const Ad = (props) => {
+  const anchor = useRef(null);
+  useLayoutEffect(() => { bucket.createAd(anchor.current, { ...defaultOptions, ...props.options }); });
 
-import React, { Component } from 'react';
-import bucket from './AdJsBucketSingleton';
+  const styles = {
+    background: `repeating-linear-gradient(45deg, white, black 10px, grey 30px)`,
+    height: '2000px',
+    position: 'absolute'
+  };
 
-class Ad extends Component {
-  constructor(props) {
-    super(props);
-    this.anchor = null;
-  }
-
-  componentDidMount() {
-    this.createAd();
-  }
-
-  createAd = () => {
-    const { options: optionOverrides } = this.props;
-    const options = { ...defaultOptions, ...optionOverrides };
-    bucket.createAd(this.anchor, options);
-  }
-
-  render() {
-    const styles = {
-      background: `repeating-linear-gradient(45deg, white, black 10px, grey 30px)`,
-      height: '2000px',
-      position: 'absolute'
-    };
-
-    return <div style={styles} ref={anchor => { this.anchor = anchor }} />;
-  }
+  return <div style={styles} ref={anchor} />;
 }
-*/
 
 export default Ad;
