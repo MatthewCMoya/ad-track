@@ -1,18 +1,16 @@
 import AdJS from 'adjs';
-import DFPNetwork from 'adjs/networks/DFP';
-import Debug from 'adjs/plugins/Debug';
-import Logging from 'adjs/plugins/Logging';
-import Sticky from 'adjs/plugins/Sticky';
-import AutoRender from 'adjs/plugins/AutoRender';
-import AutoRefresh from 'adjs/plugins/AutoRefresh';
-import Responsive from 'adjs/plugins/Responsive';
+import DFPNetwork from 'adjs/Networks/DFP';
+import DeveloperTools from 'adjs/Plugins/DeveloperTools';
+import Sticky from 'adjs/Plugins/Sticky';
+import AutoRender from 'adjs/Plugins/AutoRender';
+import AutoRefresh from 'adjs/Plugins/AutoRefresh';
+import Responsive from 'adjs/Plugins/Responsive';
 
 const bucket = new AdJS.Bucket(DFPNetwork, {
   plugins: [
     AutoRender,
     AutoRefresh,
-    Debug,
-    Logging,
+    DeveloperTools,
     Responsive,
     Sticky,
   ],
